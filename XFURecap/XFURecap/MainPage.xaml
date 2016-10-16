@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFURecap.MainPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Color x:Key="bgColor">White</Color>
+			<Color x:Key="fgColor">Black</Color>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<StackLayout x:Name ="LayoutRoot" Padding="10">
+			<Label x:Name="billLabel" Text="Bill" TextColor="{DynamicResource fgColor}"  />
+			<Label x:Name="tipLabel" Text="Tip" TextColor="{DynamicResource fgColor}"  />
+			<Label x:Name="totalLabel" Text="Total" TextColor="{DynamicResource fgColor}"/>
+			<Button Text="light" Clicked="Button_OnClicked" TextColor="Black"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
