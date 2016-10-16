@@ -2,15 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XFURecap.MainPage">
-	<ContentPage.Resources>
+	<Page.Resources>
 		<ResourceDictionary>
 			<Color x:Key="bgColor">White</Color>
 			<Color x:Key="fgColor">Black</Color>
+			<Style x:Key="infoLabelStyle" TargetType="Label">
+				<Setter Property="FontSize" Value="22" />
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
 		</ResourceDictionary>
-	</ContentPage.Resources>
+	</Page.Resources>
 	<ContentPage.Content>
 		<StackLayout x:Name ="LayoutRoot" Padding="10">
-			<Label x:Name="billLabel" Text="Bill" TextColor="{DynamicResource fgColor}"  />
+			<Label x:Name="billLabel" Text="Bill" Style="{StaticResource infoLabelStyle}"  />
 			<Label x:Name="tipLabel" Text="Tip" TextColor="{DynamicResource fgColor}"  />
 			<Label x:Name="totalLabel" Text="Total" TextColor="{DynamicResource fgColor}"/>
 			<Button Text="light" Clicked="Button_OnClicked" TextColor="Black"/>
